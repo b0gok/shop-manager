@@ -8,7 +8,8 @@
       <th scope="col">Артикул</th>
       <th scope="col">Название</th>
       <th scope="col">Производитель</th>
-      <th scope="col">Кол-во</th>
+      <th scope="col">Количество</th>
+      <th scope="col">Тэги</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
         <td><%= product.title %></td>
         <td><%= product.manufacturer&.title %></td>
         <td><%= product.quantity %></td>
+        <td><%= render 'tags', tags: product.tag_list %></td>
         <td><%= link_to 'Просмотр', product %></td>
         <td><%= link_to 'Редактировать', edit_product_path(product) %></td>
         <td><%= link_to 'Удалить', product, method: :delete, data: { confirm: 'Вы уверены?' } %></td>

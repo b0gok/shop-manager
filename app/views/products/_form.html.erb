@@ -30,5 +30,10 @@
     <%= form.collection_select :manufacturer_id, Manufacturer.order(:title), :id, :title, {}, { class: 'form-select' } %>
   </div>
 
+  <div class="mb-3">
+    <%= form.label :tag_list, class: 'form-label' %>
+    <%= form.text_field :tag_list, class: 'form-control' %>
+  </div>
+
   <%= form.submit 'Сохранить', class: 'btn btn-primary' %>
 <% end %>
