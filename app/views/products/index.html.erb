@@ -7,6 +7,7 @@
     <tr>
       <th scope="col">Артикул</th>
       <th scope="col">Название</th>
+      <th scope="col">Производитель</th>
       <th scope="col">Кол-во</th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
       <tr>
         <th scope="row"><%= product.sku %></th>
         <td><%= product.title %></td>
+        <td><%= product.manufacturer&.title %></td>
         <td><%= product.quantity %></td>
         <td><%= link_to 'Просмотр', product %></td>
         <td><%= link_to 'Редактировать', edit_product_path(product) %></td>
