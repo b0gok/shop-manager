@@ -15,5 +15,10 @@
   <%= @product.quantity %>
 </p>
 
+<p>
+  <strong>Тэги:</strong>
+  <%= @product.tag_list %>
+</p>
+
 <%= link_to 'Редактировать', edit_product_path(@product) %> |
 <%= link_to 'Назад', products_path %>
