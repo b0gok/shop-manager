@@ -1,6 +1,6 @@
 module TagsHelper
   def tags_in_pillboxes(tags)
-    sanitize tags.map { |tag| tag_in_pillbox(tag)}.join(' ')
+    sanitize(tags.map { |tag| tag_in_pillbox(tag) }.join(' '))
   end
   
   def tag_in_pillbox(str)
