@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>File:</strong>
+  <%= link_to @uploaded_report.file.filename, @uploaded_report.file if @uploaded_report.file.attached? %>
+</p>
+
+<%= link_to 'Edit', edit_uploaded_report_path(@uploaded_report) %> |
+<%= link_to 'Back', uploaded_reports_path %>

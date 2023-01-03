@@ -1,0 +1,27 @@
+<%= form_with(model: uploaded_report) do |form| %>
+  <% if uploaded_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(uploaded_report.errors.count, "error") %> prohibited this uploaded_report from being saved:</h2>
+
+      <ul>
+        <% uploaded_report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :report %>
+    <%= form.file_field :file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodicity %>
+    <%= form.select :kind, options_for_select(UploadedReport.kinds)%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   resources :products
 
-  resources :manufacturers
+  resources :manufacturers 
+
+  resources :uploaded_reports
 end

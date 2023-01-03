@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Uploaded Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uploaded_reports.each do |uploaded_report| %>
+      <tr>
+        <td><%= uploaded_report.file.filename %></td>
+        <td><%= uploaded_report.kind %></td>
+        <td><%= link_to 'Show', uploaded_report %></td>
+        <td><%= link_to 'Edit', edit_uploaded_report_path(uploaded_report) %></td>
+        <td><%= link_to 'Destroy', uploaded_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Uploaded Report', new_uploaded_report_path %>
